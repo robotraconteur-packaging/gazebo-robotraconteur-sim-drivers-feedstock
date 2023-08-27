@@ -1,4 +1,4 @@
 channel_sources:
-  - robotraconteur,conda-forge
+  - robotraconteur,wasontech,conda-forge
 channel_targets:
   - robotraconteur main
