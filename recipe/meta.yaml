@@ -1,0 +1,41 @@
+{% set name = "gazebo-robotraconteur-sim-drivers" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  path: C:\\Users\\wasonj\\Documents\\RobotRaconteur2\\drivers\\gazebo_robotraconteur_sim_drivers
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+  noarch: python
+
+requirements:
+  host:
+    - pip
+    - python >=3.6
+    - robotraconteur
+    - robotraconteur_companion_python
+    - robotraconteur-abstract-robot-python
+    - py-opencv
+    - drekar-launch-process
+  run:
+    - python >=3.6
+    - robotraconteur
+    - robotraconteur_companion_python
+    - robotraconteur-abstract-robot-python
+    - py-opencv
+    - drekar-launch-process
+
+about:
+  home: https://github.com/robotraconteur-contrib/gazebo-robotraconteur-sim-drivers
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  summary: Simulated Robot Raconteur drivers for Gazebo virtual devices
+
+extra:
+  recipe-maintainers:
+    - johnwason
